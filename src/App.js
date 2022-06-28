@@ -1,7 +1,13 @@
+import ItemCount from "./components/ItemCount";
 import ItemListConteiner from "./components/ItemListContainer";
 import NavBar from "./components/NavBar";
 
 function App() {
+
+  const onAdd = () => {
+    console.log("PRODUCTOS AGREGADOS");
+}
+
   return (
     <div className="App">
       <header className="App-header">
@@ -23,6 +29,7 @@ function App() {
 
         <NavBar />
         <ItemListConteiner grettings="Bienvenida" />
+        <ItemCount stock={6} initial={1} onAdd={onAdd}/>
       </header>
     </div>
   );
